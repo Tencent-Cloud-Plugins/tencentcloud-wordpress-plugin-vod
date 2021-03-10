@@ -18,7 +18,7 @@
 | 适用平台     | [WordPress](https://wordpress.org/)                                                               |
 | 适用产品     | [腾讯云点播（VOD）](https://cloud.tencent.com/product/vod)                                                         |
 | GitHub项目 | [tencentcloud-wordpress-plugin-vod](https://github.com/Tencent-Cloud-Plugins/tencentcloud-wordpress-plugin-vod) |
-| gitee项目 | [tencentcloud-wordpress-plugin-vod](https://gitee.com/Tencent-Cloud-Plugins/tencentcloud-wordpress-plugin-vod) |
+| Gitee项目 | [tencentcloud-wordpress-plugin-vod](https://gitee.com/Tencent-Cloud-Plugins/tencentcloud-wordpress-plugin-vod) |
 | 主创团队     | 腾讯云中小企业产品中心（SMB Product Center of Tencent Cloud）                                                            |
 
 ## 2.功能特性
@@ -63,7 +63,6 @@
 | ------ | -------------------------------------------------------------------------------- |
 | GitHub | [link](https://github.com/Tencent-Cloud-Plugins/tencentcloud-wordpress-plugin-vod) |
 | gitee  | [link](https://gitee.com/Tencent-Cloud-Plugins/tencentcloud-wordpress-plugin-vod) |
-| 插件中心 | [link](https://wordpress.org/plugins/tencentcloud-vod/#installation) |
 
 ## 6.FAQ
 
