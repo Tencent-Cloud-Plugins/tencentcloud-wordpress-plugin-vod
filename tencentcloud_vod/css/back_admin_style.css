@@ -1,0 +1,13 @@
+.txc-container {
+    margin-top: 1.2em
+}
+
+.fake_hyperlink {
+    color: #0000EE;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fake_hyperlink:hover {
+    text-decoration: underline;
+}
