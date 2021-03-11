@@ -37,6 +37,12 @@ function TencentCloudVodSettingPage()
     </style>
     <div id="vod-message" class="updated notice is-dismissible" style="margin-bottom: 1%;margin-left:0;"><p>
             腾讯云点播（VOD）插件启用生效中。</p>
+        <p>
+            在 wordpress 后台上传视频文件，会自动将视频文件上传至腾讯云点播，并将在后续播放时使用腾讯云点播的视频源，不消耗源站流量
+        </p>
+        <p>
+            包括 wmv, avi, flv, mov, mpeg, mp4, webm, mkv 等视频格式
+        </p>
         <button type="button" class="notice-dismiss"><span class="screen-reader-text">忽略此通知。</span></button>
     </div>
     <div class="row">
