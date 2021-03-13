@@ -31,7 +31,7 @@
 ### 3.1.部署方式一：通过GitHub部署安装
 
 > 1. git clone https://github.com/Tencent-Cloud-Plugins/tencentcloud-wordpress-plugin-vod.git
-> 2. 复制 tencentcloud_vod文件夹 到WordPress安装路径/wp-content/plugins/文件夹里面
+> 2. 复制 tencentcloud-vod文件夹 到WordPress安装路径/wp-content/plugins/文件夹里面
 
 ## 4.使用指引
 
