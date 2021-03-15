@@ -24,7 +24,7 @@ date_default_timezone_set('Asia/Shanghai');
 
 define('TENCENT_WORDPRESS_VOD_VERSION', 1.0);
 define('TENCENT_WORDPRESS_VOD_DIR', plugin_dir_path(__FILE__));
-define('TENCNET_WORDPRESS_CAPTCHA_BASENAME', plugin_basename(__FILE__));
+define('TENCNET_WORDPRESS_VOD_BASENAME', plugin_basename(__FILE__));
 define('TENCENT_WORDPRESS_VOD_JS_DIR', plugins_url('tencentcloud-vod') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR);
 define('TENCENT_WORDPRESS_VOD_CSS_DIR', plugins_url('tencentcloud-vod') . DIRECTORY_SEPARATOR . 'css' . DIRECTORY_SEPARATOR);
 define('TENCENT_WORDPRESS_VOD_NAME', 'tencentcloud-vod');
