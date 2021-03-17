@@ -412,16 +412,17 @@ if (!class_exists('TencentWordpressPluginsSettingActions')) {
         public static function sendPostRequest($url, $data)
         {
             ob_start();
-            if (function_exists('curl_init')) {
-                $json_data = json_encode($data);
-                $curl = curl_init($url);
-                curl_setopt($curl, CURLOPT_HEADER, false);
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-type: application/json"));
-                curl_setopt($curl, CURLOPT_POST, true);
-                curl_setopt($curl, CURLOPT_POSTFIELDS, $json_data);
-                curl_exec($curl);
-                curl_close($curl);
+            if (function_exists('wp_remote_post')) {
+                wp_remote_post($url, $data);
+                // $json_data = json_encode($data);
+                // $curl = curl_init($url);
+                // curl_setopt($curl, CURLOPT_HEADER, false);
+                // curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+                // curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-type: application/json"));
+                // curl_setopt($curl, CURLOPT_POST, true);
+                // curl_setopt($curl, CURLOPT_POSTFIELDS, $json_data);
+                // curl_exec($curl);
+                // curl_close($curl);
             } else {
                 $client = new Client();
                 $client->post($url, [

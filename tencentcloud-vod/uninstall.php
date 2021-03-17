@@ -24,7 +24,6 @@ defined('TENCENT_WORDPRESS_PLUGINS_COMMON_DIR') or define('TENCENT_WORDPRESS_PLU
     plugin_dir_path(__FILE__) . 'common' . DIRECTORY_SEPARATOR);
 require_once TENCENT_WORDPRESS_PLUGINS_COMMON_DIR . 'TencentWordpressPluginsSettingActions.php';
 defined('TENCENT_WORDPRESS_PLUGINS_SHOW_NAME') || define('TENCENT_WORDPRESS_PLUGINS_SHOW_NAME', 'tencentcloud-plugin-vod');
-defined('DIR') || define('DIR', plugin_dir_path(__FILE__));
 defined('TENCENT_WORDPRESS_VOD_DIR') || define('TENCENT_WORDPRESS_VOD_DIR', plugin_dir_path(__FILE__));
 require_once TENCENT_WORDPRESS_VOD_DIR . 'TencentCloudVodActions.php';
 require_once TENCENT_WORDPRESS_VOD_DIR . 'TencentCloudVodOptions.php';

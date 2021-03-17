@@ -149,7 +149,7 @@ class TencentCloudVodActions
         foreach ($_SESSION['uploadVideos'] as $key => $val) {
             $data['post_content'] = str_replace($key, $val, $data['post_content']);
         }
-        if (strpos($data['post_content'], '<video controls')) {
+        if (!strpos($data['post_content'], '<video controls')) {
             $data['post_content'] = str_replace('<video', '<video controls', $data['post_content']);
         }
         return $data;
@@ -369,6 +369,8 @@ class TencentCloudVodActions
         $tencentWordpressVodOptions = self::getVodOptionsObject();
 
         $tencentWordpressVodOptions->setActivation(true);
+
+        delete_option(self::TENCENT_WORDPRESS_VOD_OPTIONS);
 
         add_option(self::TENCENT_WORDPRESS_VOD_OPTIONS, $tencentWordpressVodOptions);
 
