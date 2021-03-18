@@ -44,3 +44,6 @@ License URI:http://www.apache.org/licenses/LICENSE-2.0
 * 2、更新过期版本 bootstrap.css；
 * 3、change remote call curl_init to wp_remote_post；
 * 4、modify generic function/class/define/namespace names；
+
+= 1.0.3 =
+* 1、remove redundant script and style files；
