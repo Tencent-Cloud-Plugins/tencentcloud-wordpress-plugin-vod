@@ -198,26 +198,9 @@ class TencentCloudVodActions
         return $links;
     }
 
-    /**
-     * 在文章页面加载JS脚本
-     */
-    public function loadScriptForPage()
-    {
-        if (is_single() || is_paged()) {
-            wp_register_script('codeVerify_front_user_script',
-                TENCENT_WORDPRESS_VOD_JS_DIR . 'tencent_cloud_vod_user.js',
-                array('jquery'), '2.1', true);
-            wp_enqueue_script('codeVerify_front_user_script');
-            wp_register_script('TCaptcha',
-                'https://ssl.captcha.qq.com/TCaptcha.js',
-                array('jquery'), '2.1', true);
-            wp_enqueue_script('TCaptcha');
-        }
-    }
-
     public function loadCssForPage()
     {
-        wp_enqueue_style('codeVerify_admin_css', TENCENT_WORDPRESS_VOD_CSS_DIR . 'bootstrap.min.css');
+        wp_enqueue_style('codeVerify_admin_css', TENCENT_WORDPRESS_PLUGINS_COMMON_CSS_URL . 'bootstrap.min.css');
     }
 
     /**

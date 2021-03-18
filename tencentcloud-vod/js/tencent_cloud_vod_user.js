@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 jQuery(function ($) {
-    //屏蔽通过按钮
+    //屏蔽提交按钮
     $('#codePassButton').hide();
     //验证按钮的点击时间
     $('#codeVerifyButton').click(function () {
