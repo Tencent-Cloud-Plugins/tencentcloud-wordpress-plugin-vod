@@ -122,7 +122,7 @@ function TencentCloudVodSettingPage()
                                 <th scope="row"><label for="vod-option-transcode"><h5>是否开启转自适应码流</h5></label></th>
                                 <td>
                                     <div class="custom-control custom-switch div_custom_switch_padding_top">
-                                        <input type="checkbox" disabled class="custom-control-input"
+                                        <input type="checkbox" class="custom-control-input"
                                                id="vod-option-transcode" <?php if ($transCode === $vodOptions::HLS_TRANSCODE) {
                                             echo 'checked';
                                         } ?> >
