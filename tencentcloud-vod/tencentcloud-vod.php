@@ -3,7 +3,7 @@
  * Plugin Name: tencentcloud-vod
  * Plugin URI:  https://wordpress.org/plugins/tencentcloud-vod
  * Description: 通过腾讯云云点播技术，为有音视频应用相关需求的客户提供包括音视频存储管理、音视频转码处理、音视频加速播放和音视频通信服务的一站式解决方案。
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: 腾讯云
  * Author URI: https://www.tencent.com/
  * Copyright (C) 2021 Tencent Cloud.
@@ -20,7 +20,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-define('TENCENT_WORDPRESS_VOD_VERSION', '1.0.3');
+define('TENCENT_WORDPRESS_VOD_VERSION', '1.0.4');
 define('TENCENT_WORDPRESS_VOD_DIR', plugin_dir_path(__FILE__));
 define('TENCNET_WORDPRESS_VOD_BASENAME', plugin_basename(__FILE__));
 define('TENCENT_WORDPRESS_VOD_JS_DIR', plugins_url('tencentcloud-vod') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR);
