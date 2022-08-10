@@ -236,9 +236,6 @@ class TencentCloudVodActions
         if (empty($SubAppId)) {
             return 'SDKAppId 未填写.';
         }
-        if (empty($transcode)) {
-            return '是否转码未填写.';
-        }
         return true;
     }
 

@@ -5,7 +5,7 @@ Donate link: https://www.tencent.com/
 Tags:tencent,tencentcloud,qcloud,春雨,腾讯云点播,腾讯云VOD,腾讯云,云点播
 Requires at least: 4.5.0
 Tested up to: 5.7
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License:Apache 2.0
 License URI:http://www.apache.org/licenses/LICENSE-2.0
 
@@ -47,3 +47,6 @@ License URI:http://www.apache.org/licenses/LICENSE-2.0
 
 = 1.0.3 =
 * 1、remove redundant script and style files；
+
+= 1.0.4 =
+* 1. fixed an issue where the adaptive stream option could not be turned off;
