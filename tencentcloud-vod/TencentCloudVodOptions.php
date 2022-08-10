@@ -58,9 +58,8 @@ class TencentCloudVodOptions
     }
 
     public function setTranscode($transcode) {
-        if ( empty($transcode)) {
-            wp_send_json_error(array('msg' => 'transcode不能为空'));
-            // throw new \Exception('transcode不能为空');
+        if ( !in_array($transcode, array(self::DO_NOT_TRANSCODE, self::HLS_TRANSCODE)) ) {
+            wp_send_json_error(array('msg' => '开启自适应码流传参错误'));
         }
         $this->transcode = intval($transcode);
     }
