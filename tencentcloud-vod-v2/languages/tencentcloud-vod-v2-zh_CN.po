@@ -1,0 +1,181 @@
+# Copyright (C) 2022 腾讯云
+# This file is distributed under the same license as the tencentcloud-vod-v2 plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: tencentcloud-vod-v2 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tencentcloud-vod-v2\n"
+"POT-Creation-Date: 2022-09-25 16:53+0800\n"
+"PO-Revision-Date: 2022-09-25 20:21+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Domain: tencentcloud-vod-v2\n"
+
+#. Plugin Name of the plugin
+msgid "tencentcloud-vod-v2"
+msgstr "腾讯云点播（VOD）插件"
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/tencentcloud-vod-v2"
+msgstr ""
+
+#. Description of the plugin
+msgid "Tencent Cloud Video on Demand (VOD) provides one-stop VPaaS (Video Platform as a Service) solutions for audio/video capture, upload, storage, automated transcoding, and accelerated playback, as well as media asset management and audio/video communications."
+msgstr "通过腾讯云云点播技术，为有音视频应用相关需求的客户提供包括音视频存储管理、音视频转码处理、音视频加速播放和音视频通信服务的一站式解决方案。"
+
+#. Author of the plugin
+msgid "Tencent Cloud"
+msgstr "腾讯云"
+
+#. Author URI of the plugin
+msgid "https://www.tencent.com/"
+msgstr ""
+
+msgid "Enable adaptive dynamic streaming"
+msgstr "是否开启转自适应码流"
+
+msgid "Adaptive dynamic streaming"
+msgstr "自适应码流"
+
+msgid "Custom key"
+msgstr "自定义密钥"
+
+msgid "Configure a separate Tencent Cloud key for the plugin"
+msgstr "为该插件配置单独定义的腾讯云密钥"
+
+msgid "Tencent Cloud VOD plugin in effect."
+msgstr "腾讯云点播（VOD）插件启用生效中。"
+
+msgid "If you upload a video in the background of wordpress, the video will be uploaded to VOD automatically , and the video source on VOD will be used for subsequent playback, without consuming the traffic of the source site."
+msgstr "在 wordpress 后台上传视频文件，会自动将视频文件上传至腾讯云点播，并将在后续播放时使用腾讯云点播的视频源，不消耗源站流量。"
+
+msgid "Including WMV, AVI, FLV, MOV, MPEG, MP4, WEBM, MKV and other video formats."
+msgstr "包括 wmv, avi, flv, mov, mpeg, mp4, webm, mkv 等视频格式。"
+
+msgid "Tencent Cloud VOD plugin"
+msgstr "腾讯云点播（VOD）插件"
+
+msgid "Videos will be uploaded to Tencent Cloud VOD automatically, and distributed and played through VOD"
+msgstr "视频自动上传腾讯云点播，并使用云点播进行分发播放"
+
+msgid "Plugin configuration"
+msgstr "插件配置"
+
+msgid "Access"
+msgstr "访问"
+
+msgid "key management"
+msgstr "密钥管理"
+
+msgid "get the secret ID and secret key or create a key string through \"Create Key\""
+msgstr "获取 SecretId 和 SecretKey 或通过\"新建密钥\"创建密钥串"
+
+msgid "app management"
+msgstr "应用列表"
+
+msgid "get SubAppID or create SubAppId through \"Create Application\""
+msgstr "获取 SubAppID 或通过\"创建应用\"创建 SubAppID"
+
+msgid "Verify"
+msgstr "验证设置"
+
+msgid "Verify configuration"
+msgstr "验证设置是否正确"
+
+msgid "Save"
+msgstr "保存设置"
+
+msgid "Documentation"
+msgstr "文档中心"
+
+msgid "Feedback"
+msgstr "意见反馈"
+
+msgid "Ignore this notification."
+msgstr "忽略此通知。"
+
+msgid "Success."
+msgstr "操作成功。"
+
+msgid "Save ok"
+msgstr "保存成功"
+
+msgid "Configuration verification succeeded"
+msgstr "配置测试成功"
+
+msgid "Configuration verification failed"
+msgstr "配置测试失败"
+
+msgid "The current user has no permission."
+msgstr "当前用户无权限."
+
+msgid "Missing dependency file"
+msgstr "缺少依赖文件"
+
+msgid "Missing dependency file, please run `composer install` first"
+msgstr "缺少依赖文件，请先执行composer install"
+
+msgid "Missing dependency file, please ensure that the Tencent Cloud SDK is installed"
+msgstr "缺少依赖文件，请确保安装了腾讯云sdk"
+
+msgid "VOD"
+msgstr "云点播"
+
+msgid "SecretId not set."
+msgstr "SecretId 未填写."
+
+msgid "SecretKey not set."
+msgstr "SecretKey 未填写."
+
+msgid "SubAppId not set."
+msgstr "SubAppId 未填写."
+
+msgid "Tencent Cloud Configuration"
+msgstr "腾讯云配置"
+
+msgid "Plugin configuration center"
+msgstr "插件配置中心"
+
+msgid "Tencent Cloud key"
+msgstr "腾讯云密钥"
+
+msgid "Functionality"
+msgstr "插件功能"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Operation"
+msgstr "操作"
+
+msgid "Open"
+msgstr "开启"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Configuration"
+msgstr "配置"
+
+msgid "Tencent Cloud Settings"
+msgstr "腾讯云设置"
+
+msgid "Configure the universal Tencent cloud key for each plugin"
+msgstr "为各个腾讯云应用插件配置全局通用的腾讯云密钥，简化插件密钥配置工作"
+
+msgid "Turn on the global key"
+msgstr "开启全局密钥"
+
+msgid "Allows Tencent Cloud to collect the necessary plugin data to optimize and improve the product experience"
+msgstr "允许腾讯云采集必要的插件启用数据用于优化提升产品体验"
+
+msgid "Participate in experience optimization projects"
+msgstr "参与体验优化项目"

@@ -15,10 +15,10 @@ jobs:
       with:
         generate-zip: true
       env:
-        BUILD_DIR: ./tencentcloud-vod
+        BUILD_DIR: ./tencentcloud-vod-v2
         SVN_PASSWORD: ${{ secrets.WORDPRESS_SVN_PASSWORD }}
         SVN_USERNAME: ${{ secrets.WORDPRESS_SVN_USERNAME }}
-        SLUG: tencentcloud-vod
+        SLUG: tencentcloud-vod-v2
     - name: Upload release asset
       uses: actions/upload-release-asset@v1
       env:
