@@ -18,7 +18,10 @@
 namespace TencentCloudVod;
 
 if (!is_file(TENCENT_WORDPRESS_VOD_DIR . 'vendor/autoload.php')) {
-    wp_die('缺少依赖文件，请先执行composer install', '缺少依赖文件', array('back_link' => true));
+    wp_die(
+	    __('Missing dependency file, please run `composer install` first', 'tencentcloud-vod'),
+		__('Missing dependency file', 'tencentcloud-vod'),
+		array('back_link' => true));
 }
 require_once 'vendor/autoload.php';
 require_once TENCENT_WORDPRESS_PLUGINS_COMMON_DIR . 'TencentWordpressPluginsSettingActions.php';
@@ -146,8 +149,10 @@ class TencentCloudVodActions
 
     public function insertPostData($data, $postattr, $unsanitized_postarr)
     {
-        foreach ($_SESSION['uploadVideos'] as $key => $val) {
-            $data['post_content'] = str_replace($key, $val, $data['post_content']);
+        if (is_array($_SESSION['uploadVideos']) || is_object($_SESSION['uploadVideos'])) {
+            foreach ($_SESSION['uploadVideos'] as $key => $val) {
+                $data['post_content'] = str_replace($key, $val, $data['post_content']);
+            }
         }
         if (!strpos($data['post_content'], '<video controls')) {
             $data['post_content'] = str_replace('<video', '<video controls', $data['post_content']);
@@ -165,8 +170,8 @@ class TencentCloudVodActions
 
         $pagehook = add_submenu_page(
             'TencentWordpressPluginsCommonSettingPage',
-            '云点播',
-            '云点播',
+			__('VOD', 'tencentcloud-vod'),
+	        __('VOD', 'tencentcloud-vod'),
             'manage_options',
             'TencentCloudVodSettingPage',
             'TencentCloudVodSettingPage');
@@ -227,14 +232,14 @@ class TencentCloudVodActions
     {
         if ($secretCustom == '1') {
             if (empty($secretID)) {
-                return 'Secret Id未填写.';
+                return __('SecretId not set.', 'tencentcloud-vod');
             }
             if (empty($secretKey)) {
-                return 'Secret key未填写.';
+	            return __('SecretKey not set.', 'tencentcloud-vod');
             }
         }
         if (empty($SubAppId)) {
-            return 'SDKAppId 未填写.';
+	        return __('SubAppId not set.', 'tencentcloud-vod');
         }
         return true;
     }
@@ -276,9 +281,13 @@ class TencentCloudVodActions
             );
             $req->fromJsonString(json_encode($params));
             $resp = $client->DescribeAllClass($req);
-            wp_send_json_success(array('msg' => '配置测试成功', 'info' => $resp->toJsonString()));
+            wp_send_json_success(array(
+				'msg' => __('Configuration verification succeeded', 'tencentcloud-vod'),
+				'info' => $resp->toJsonString()));
         } catch (TencentCloudSDKException $e) {
-            wp_send_json_error(array('msg' => '配置测试失败', 'info' => $e));
+            wp_send_json_error(array(
+				'msg' => __('Configuration verification failed', 'tencentcloud-vod'),
+				'info' => $e));
         }
     }
 
@@ -288,7 +297,7 @@ class TencentCloudVodActions
     public function updateVodSettings()
     {
         if (!current_user_can('manage_options')) {
-            wp_send_json_error(array('msg' => '当前用户无权限.'));
+            wp_send_json_error(array('msg' => __('The current user has no permission.', 'tencentcloud-vod')));
         }
         $vodOptionsSettings = new TencentCloudVodOptions();
         $vodOptionsSettings->setSecretID(sanitize_text_field($_POST['secretId']));
@@ -315,7 +324,7 @@ class TencentCloudVodActions
         //发送用户体验数据
         $staticData = self::getTencentCloudWordPressStaticData('save_config');
         TencentWordpressPluginsSettingActions::sendUserExperienceInfo($staticData);
-        wp_send_json_success(array('msg' => '保存成功'));
+        wp_send_json_success(array('msg' => __('Save ok', 'tencentcloud-vod')));
 
     }
 
@@ -356,7 +365,7 @@ class TencentCloudVodActions
 
         $plugin = array(
             'plugin_name' => TENCENT_WORDPRESS_VOD_SHOW_NAME,
-            'nick_name' => '腾讯云云点播（VOD）插件',
+            'nick_name' => __('Tencent Cloud VOD plugin', 'tencentcloud-vod'),
             'plugin_dir' => 'tencentcloud-vod/tencentcloud-vod.php',
             'href' => 'admin.php?page=TencentCloudVodSettingPage',
             'activation' => 'true',

@@ -110,8 +110,8 @@ if (!class_exists('TencentWordpressPluginsSettingActions')) {
             }
             if ($exists === false) {
                 $pagehook = add_menu_page(
-                    '腾讯云设置',
-                    '腾讯云设置',
+                    __('Tencent Cloud Settings', 'tencentcloud-vod'),
+	                __('Tencent Cloud Settings', 'tencentcloud-vod'),
                     'manage_options',
                     'TencentWordpressPluginsCommonSettingPage',
                     'tencent_wordpress_plugin_common_page',

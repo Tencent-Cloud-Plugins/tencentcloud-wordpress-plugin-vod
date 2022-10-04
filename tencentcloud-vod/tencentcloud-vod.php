@@ -2,10 +2,12 @@
 /**
  * Plugin Name: tencentcloud-vod
  * Plugin URI:  https://wordpress.org/plugins/tencentcloud-vod
- * Description: 通过腾讯云云点播技术，为有音视频应用相关需求的客户提供包括音视频存储管理、音视频转码处理、音视频加速播放和音视频通信服务的一站式解决方案。
- * Version: 1.0.4
- * Author: 腾讯云
+ * Description: Tencent Cloud Video on Demand (VOD) provides one-stop VPaaS (Video Platform as a Service) solutions for audio/video capture, upload, storage, automated transcoding, and accelerated playback, as well as media asset management and audio/video communications.
+ * Version: 1.0.5
+ * Author: Tencent Cloud
  * Author URI: https://www.tencent.com/
+ * Text Domain: tencentcloud-vod
+ * Domain Path: /languages/
  * Copyright (C) 2021 Tencent Cloud.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +22,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-define('TENCENT_WORDPRESS_VOD_VERSION', '1.0.4');
+define('TENCENT_WORDPRESS_VOD_VERSION', '1.0.5');
 define('TENCENT_WORDPRESS_VOD_DIR', plugin_dir_path(__FILE__));
 define('TENCNET_WORDPRESS_VOD_BASENAME', plugin_basename(__FILE__));
 define('TENCENT_WORDPRESS_VOD_JS_DIR', plugins_url('tencentcloud-vod') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR);
@@ -33,7 +35,10 @@ defined('TENCENT_WORDPRESS_PLUGINS_COMMON_CSS_URL') or define('TENCENT_WORDPRESS
 defined('TENCENT_WORDPRESS_PLUGINS_COMMON_DIR') or define('TENCENT_WORDPRESS_PLUGINS_COMMON_DIR', TENCENT_WORDPRESS_VOD_DIR . 'common' . DIRECTORY_SEPARATOR);
 
 if (!is_file(TENCENT_WORDPRESS_VOD_DIR . 'vendor/autoload.php')) {
-    wp_die('缺少依赖文件，请确保安装了腾讯云sdk', '缺少依赖文件', array('back_link' => true));
+    wp_die(
+	    __('Missing dependency file, please ensure that the Tencent Cloud SDK is installed', 'tencentcloud-vod'),
+		__('Missing dependency file', 'tencentcloud-vod'),
+		array('back_link' => true));
 }
 require_once 'vendor/autoload.php';
 
@@ -75,4 +80,10 @@ add_action('admin_enqueue_scripts', array($tencentCloudVodActions, 'loadMyScript
 
 // add_action('wp_enqueue_scripts', array($tencentCloudVodActions, 'loadScriptForPage'));
 
-
+// 添加国际化
+add_action( 'init', 'vod_load_textdomain' );
+if( !function_exists( 'vod_load_textdomain' ) ){
+	function vod_load_textdomain(){
+		load_textdomain( 'tencentcloud-vod', TENCENT_WORDPRESS_VOD_DIR .'/languages/tencentcloud-vod-'. get_locale() .'.mo' );
+	}
+}

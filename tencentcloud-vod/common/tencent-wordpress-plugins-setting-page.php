@@ -56,18 +56,24 @@ function tencent_wordpress_plugin_common_page()
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page-header ">
-                        <h1 id="forms">腾讯云配置</h1>
+                        <h1 id="forms">
+                            <?php _e('Tencent Cloud Configuration', 'tencentcloud-vod'); ?>
+                        </h1>
                     </div>
                 </div>
             </div>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a id="tencent_wordpress_plugins_home_id" class="nav-link active" data-toggle="tab"
-                       href="#tencent_wordpress_plugins_home">插件配置中心</a>
+                       href="#tencent_wordpress_plugins_home">
+	                    <?php _e('Plugin configuration center', 'tencentcloud-vod'); ?>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a id="tencent_wordpress_secret_home_id" class="nav-link" data-toggle="tab"
-                       href="#tencent_wordpress_secret_home">腾讯云密钥</a>
+                       href="#tencent_wordpress_secret_home">
+	                    <?php _e('Tencent Cloud key', 'tencentcloud-vod'); ?>
+                    </a>
                 </li>
             </ul>
 
@@ -77,36 +83,39 @@ function tencent_wordpress_plugin_common_page()
                     <div class="form-group">
                         <br class="my-4">
                         <div class="row">
-                            <span class="col-lg-4"><h5>插件功能</h5></span>
-                            <span class="col-lg-1"><h5>版本</h5></span>
-                            <span class="col-lg-1"><h5>状态</h5></span>
-                            <span class="col-lg-2"><h5>操作</h5></span>
+                            <span class="col-lg-4"><h5><?php _e('Functionality', 'tencentcloud-vod'); ?></h5></span>
+                            <span class="col-lg-1"><h5><?php _e('Version', 'tencentcloud-vod'); ?></h5></span>
+                            <span class="col-lg-1"><h5><?php _e('Status', 'tencentcloud-vod'); ?></h5></span>
+                            <span class="col-lg-2"><h5><?php _e('Operation', 'tencentcloud-vod'); ?></h5></span>
                         </div>
                         <hr>
                         <?php
                         foreach ($tencent_plugins as $path => $plugin) {
                             echo '<div class="row">';
+                            $desc = __($plugin['Description'], $plugin['Name']);
                             if (isset($plugin['nick_name'])) {
-                                echo '<span class="col-lg-4"><h5>' . $plugin['nick_name'] . '</h5>' . $plugin['Description'] . '</span>';
+                                echo '<span class="col-lg-4"><h5>' . __($plugin['nick_name'], $plugin['Name']) . '</h5>' . $desc . '</span>';
                             } else {
-                                echo '<span class="col-lg-4"><h5>' . $plugin['Name'] . '</h5>' . $plugin['Description'] . '</span>';
+                                echo '<span class="col-lg-4"><h5>' . __($plugin['Name'], $plugin['Name']) . '</h5>' . $desc . '</span>';
                             }
 
                             echo '<span class="col-lg-1 pluging-space-center">' . $plugin['Version'] . '</span>';
 
+                            $status = __('Close', 'tencentcloud-vod');
+                            $op_status = __('Open', 'tencentcloud-vod');
                             if (isset($plugin['status']) && $plugin['status'] == 'true') {
-                                echo '<span class="col-lg-1 pluging-space-center"> 开启 </span>';
-                            } else {
-                                echo '<span class="col-lg-1 pluging-space-center"> 关闭 </span>';
+	                            $status = __('Open', 'tencentcloud-vod');
+                                $op_status = __('Close', 'tencentcloud-vod');
                             }
+	                        echo '<span class="col-lg-1 pluging-space-center"> ' . $status . ' </span>';
 
                             if (isset($plugin['activation']) && $plugin['activation'] == 'true') {
                                 echo '<span class="col-lg-2 pluging-space-center">';
                                 if (isset($plugin['status']) && $plugin['status'] == 'true') {
-                                    echo '<a type="button" class="btn btn-primary" href="' . $plugin['href'] . '">配置</a>';
-                                    echo '<button title="' . $plugin['plugin_dir'] . '" id="button_close_tencent_plugin_' . $plugin['Name'] . '"  name="' . $plugin['Name'] . '" type="button" class="btn btn-primary plugin-button-close">关闭</button>';
+                                    echo '<a type="button" class="btn btn-primary" href="' . $plugin['href'] . '">' . __('Configuration', 'tencentcloud-vod') . '</a>';
+                                    echo '<button title="' . $plugin['plugin_dir'] . '" id="button_close_tencent_plugin_' . $plugin['Name'] . '"  name="' . $plugin['Name'] . '" type="button" class="btn btn-primary plugin-button-close">' . $op_status . '</button>';
                                 } else {
-                                    echo '<button title="' . $plugin['plugin_dir'] . '" id="button_open_tencent_plugin_' . $plugin['Name'] . '"  name="' . $plugin['Name'] . '" type="button" class="btn btn-primary">开启</button>';
+                                    echo '<button title="' . $plugin['plugin_dir'] . '" id="button_open_tencent_plugin_' . $plugin['Name'] . '"  name="' . $plugin['Name'] . '" type="button" class="btn btn-primary">' . $op_status . '</button>';
                                 }
                                 echo '</span>';
                             } else {
@@ -132,7 +141,9 @@ function tencent_wordpress_plugin_common_page()
                                         <!-- Setting Option no_local_file-->
                                         <div class="row form-group">
                                             <label class="col-form-label col-lg-2 lable_padding_left"
-                                                   for="inputDefault">开启全局密钥</label>
+                                                   for="inputDefault">
+                                                <?php _e('Turn on the global key', 'tencentcloud-vod'); ?>
+                                            </label>
                                             <div class="custom-control custom-switch div_custom_switch_padding_top">
                                                 <input name="tencent_wordpress_common_secret" type="checkbox"
                                                        class="custom-control-input"
@@ -146,7 +157,9 @@ function tencent_wordpress_plugin_common_page()
                                                     ?>
                                                 >
                                                 <label class="custom-control-label"
-                                                       for="tencent_wordpress_common_secret_checkbox_id">为各个腾讯云应用插件配置全局通用的腾讯云密钥，简化插件密钥配置工作</label>
+                                                       for="tencent_wordpress_common_secret_checkbox_id">
+                                                    <?php _e('Configure the universal Tencent cloud key for each plugin', 'tencentcloud-vod'); ?>
+                                                </label>
                                             </div>
                                         </div>
                                         <!-- Setting Option SecretId-->
@@ -176,16 +189,23 @@ function tencent_wordpress_plugin_common_page()
                                             <span id="span_twp_common_secret_key"
                                                   class="invalid-feedback offset-lg-2"></span>
                                             <div class="offset-lg-2">
-                                                <p>访问 <a href="https://console.qcloud.com/cam/capi"
-                                                         target="_blank">密钥管理</a>获取
-                                                    SecretId和SecretKey或通过"新建密钥"创建密钥串</p>
+                                                <p>
+	                                                <?php _e("Access", "tencentcloud-vod"); ?>
+                                                    <a href="https://console.qcloud.com/cam/capi"
+                                                         target="_blank">
+		                                                <?php _e('key management', 'tencentcloud-vod'); ?>
+                                                    </a>
+	                                                <?php _e("get the secret ID and secret key or create a key string through \"Create Key\"", "tencentcloud-vod"); ?>
+                                                </p>
                                             </div>
                                         </div>
 
                                         <!-- Setting Option no_local_file-->
                                         <div class="row form-group">
                                             <label class="col-form-label col-lg-2 lable_padding_left"
-                                                   for="inputDefault">参与体验优化项目</label>
+                                                   for="inputDefault">
+	                                            <?php _e("Participate in experience optimization projects", "tencentcloud-vod"); ?>
+                                            </label>
                                             <div class="custom-control custom-switch div_custom_switch_padding_top">
                                                 <input name="customize_optimize_project" type="checkbox"
                                                        class="custom-control-input"
@@ -199,7 +219,9 @@ function tencent_wordpress_plugin_common_page()
                                                     ?>
                                                 >
                                                 <label class="custom-control-label"
-                                                       for="customize_optimize_project_checkbox_id">允许腾讯云采集必要的插件启用数据用于优化提升产品体验</label>
+                                                       for="customize_optimize_project_checkbox_id">
+	                                                <?php _e('Allows Tencent Cloud to collect the necessary plugin data to optimize and improve the product experience', 'tencentcloud-vod'); ?>
+                                                </label>
                                             </div>
                                         </div>
                                     </form>
@@ -208,15 +230,21 @@ function tencent_wordpress_plugin_common_page()
                         </div>
                     </div>
 
-                    <button id="button_twp_common_secret_save" type="button" class="btn btn-primary">保存配置</button>
+                    <button id="button_twp_common_secret_save" type="button" class="btn btn-primary">
+	                    <?php _e("Save", "tencentcloud-vod"); ?>
+                    </button>
                     <span id="span_twp_common_secret_save" class="invalid-feedback offset-lg-2"></span>
                 </div>
             </div>
             <br>
             <div style="text-align: center" class="setting_page_footer">
-                <a href="https://openapp.qq.com/" target="_blank">文档中心</a> | <a
+                <a href="https://openapp.qq.com/" target="_blank">
+	                <?php _e('Documentation', 'tencentcloud-vod'); ?>
+                </a> | <a
                         href="https://github.com/Tencent-Cloud-Plugins/" target="_blank">GitHub</a> | <a
-                        href="https://support.qq.com/product/164613" target="_blank">反馈建议</a>
+                        href="https://support.qq.com/product/164613" target="_blank">
+		            <?php _e('Feedback', 'tencentcloud-vod'); ?>
+                </a>
             </div>
         </div>
     </div>
