@@ -39,7 +39,7 @@ class TencentCloudVodOptions
                                 $secretID = '',
                                 $secretKey = '',
                                 $SubAppID = '',
-                                $transcode = self::HLS_TRANSCODE)
+                                $transcode = self::DO_NOT_TRANSCODE)
     {
         $this->customKey = $customKey;
         $this->secretID = $secretID;

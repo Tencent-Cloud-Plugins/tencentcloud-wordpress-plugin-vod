@@ -1,0 +1,238 @@
+# Copyright (C) 2022 Tencent Cloud
+# This file is distributed under the same license as the tencentcloud-vod plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: tencentcloud-vod 1.0.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tencentcloud-vod\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-09-25T12:29:13+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: tencentcloud-vod\n"
+
+#. Plugin Name of the plugin
+msgid "tencentcloud-vod"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/tencentcloud-vod"
+msgstr ""
+
+#. Description of the plugin
+msgid "Tencent Cloud Video on Demand (VOD) provides one-stop VPaaS (Video Platform as a Service) solutions for audio/video capture, upload, storage, automated transcoding, and accelerated playback, as well as media asset management and audio/video communications."
+msgstr ""
+
+#. Author of the plugin
+msgid "Tencent Cloud"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.tencent.com/"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:60
+msgid "Tencent Cloud Configuration"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:69
+msgid "Plugin configuration center"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:75
+msgid "Tencent Cloud key"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:86
+msgid "Functionality"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:87
+msgid "Version"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:88
+msgid "Status"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:89
+msgid "Operation"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:103
+msgid "Close"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:105
+msgid "Open"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:112
+msgid "Configuration"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:142
+msgid "Turn on the global key"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:158
+msgid "Configure the universal Tencent cloud key for each plugin"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:190
+#: TencentCloudVodSettingPage.php:117
+#: TencentCloudVodSettingPage.php:132
+msgid "Access"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:193
+#: TencentCloudVodSettingPage.php:119
+msgid "key management"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:195
+#: TencentCloudVodSettingPage.php:121
+msgid "get the secret ID and secret key or create a key string through \"Create Key\""
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:204
+msgid "Participate in experience optimization projects"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:220
+msgid "Allows Tencent Cloud to collect the necessary plugin data to optimize and improve the product experience"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:231
+#: TencentCloudVodSettingPage.php:183
+msgid "Save"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:239
+#: TencentCloudVodSettingPage.php:187
+msgid "Documentation"
+msgstr ""
+
+#: common/tencent-wordpress-plugins-setting-page.php:243
+#: TencentCloudVodSettingPage.php:192
+msgid "Feedback"
+msgstr ""
+
+#: common/TencentWordpressPluginsSettingActions.php:113
+#: common/TencentWordpressPluginsSettingActions.php:114
+msgid "Tencent Cloud Settings"
+msgstr ""
+
+#: tencentcloud-vod.php:39
+msgid "Missing dependency file, please ensure that the Tencent Cloud SDK is installed"
+msgstr ""
+
+#: tencentcloud-vod.php:40
+#: TencentCloudVodActions.php:23
+msgid "Missing dependency file"
+msgstr ""
+
+#: TencentCloudVodActions.php:22
+msgid "Missing dependency file, please run `composer install` first"
+msgstr ""
+
+#: TencentCloudVodActions.php:171
+#: TencentCloudVodActions.php:172
+msgid "VOD"
+msgstr ""
+
+#: TencentCloudVodActions.php:233
+msgid "SecretId not set."
+msgstr ""
+
+#: TencentCloudVodActions.php:236
+msgid "SecretKey not set."
+msgstr ""
+
+#: TencentCloudVodActions.php:240
+msgid "SubAppId not set."
+msgstr ""
+
+#: TencentCloudVodActions.php:283
+msgid "Configuration verification succeeded"
+msgstr ""
+
+#: TencentCloudVodActions.php:287
+msgid "Configuration verification failed"
+msgstr ""
+
+#: TencentCloudVodActions.php:298
+msgid "The current user has no permission."
+msgstr ""
+
+#: TencentCloudVodActions.php:325
+msgid "Save ok"
+msgstr ""
+
+#: TencentCloudVodActions.php:366
+#: TencentCloudVodSettingPage.php:55
+msgid "Tencent Cloud VOD plugin"
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:39
+msgid "Tencent Cloud VOD plugin in effect."
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:42
+msgid "If you upload a video in the background of wordpress, the video will be uploaded to VOD automatically , and the video source on VOD will be used for subsequent playback, without consuming the traffic of the source site."
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:45
+msgid "Including WMV, AVI, FLV, MOV, MPEG, MP4, WEBM, MKV and other video formats."
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:48
+msgid "Ignore this notification."
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:58
+msgid "Videos will be uploaded to Tencent Cloud VOD automatically, and distributed and played through VOD"
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:64
+msgid "Success."
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:70
+msgid "Plugin configuration"
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:83
+msgid "Custom key"
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:92
+msgid "Configure a separate Tencent Cloud key for the plugin"
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:134
+msgid "app management"
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:136
+msgid "get SubAppID or create SubAppId through \"Create Application\""
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:145
+msgid "Adaptive dynamic streaming"
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:155
+msgid "Enable adaptive dynamic streaming"
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:165
+msgid "Verify configuration"
+msgstr ""
+
+#: TencentCloudVodSettingPage.php:171
+msgid "Verify"
+msgstr ""
