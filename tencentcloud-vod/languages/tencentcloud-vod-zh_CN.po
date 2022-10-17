@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the tencentcloud-vod plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: tencentcloud-vod 1.0.5\n"
+"Project-Id-Version: tencentcloud-vod 1.0.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tencentcloud-vod\n"
 "POT-Creation-Date: 2022-09-25 16:53+0800\n"
 "PO-Revision-Date: 2022-09-25 20:21+0800\n"
