@@ -136,7 +136,7 @@ function tencent_wordpress_plugin_common_page()
                             <div class="row">
                                 <div class="col-lg-9">
                                     <form id="tencent_wordpress_common_secert_info_form"
-                                          data-ajax-url="<?php echo $ajax_url ?>" name="twpcommomsecret" method="post"
+                                          data-ajax-url="<?php echo esc_attr($ajax_url) ?>" name="twpcommomsecret" method="post"
                                           class="bs-component">
                                         <!-- Setting Option no_local_file-->
                                         <div class="row form-group">
