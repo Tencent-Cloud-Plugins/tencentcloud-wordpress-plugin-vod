@@ -14,7 +14,7 @@
 | -------- | ----------------------------------------------------------------------------------------------------------- |
 | 中文名称     | 腾讯云点播（VOD）插件                                                                                                |
 | 英文名称     | tencentcloud_vod                                                                                            |
-| 最新版本     | v1.0.6 (2022.10.17)                                                                                         |
+| 最新版本     | v1.0.7 (2022.10.22)                                                                                         |
 | 适用平台     | [WordPress](https://wordpress.org/)                                                               |
 | 适用产品     | [腾讯云点播（VOD）](https://cloud.tencent.com/product/vod)                                                         |
 | GitHub项目 | [tencentcloud-wordpress-plugin-vod](https://github.com/Tencent-Cloud-Plugins/tencentcloud-wordpress-plugin-vod) |

@@ -3,7 +3,7 @@
  * Plugin Name: tencentcloud-vod
  * Plugin URI:  https://wordpress.org/plugins/tencentcloud-vod
  * Description: Tencent Cloud Video on Demand (VOD) provides one-stop VPaaS (Video Platform as a Service) solutions for audio/video capture, upload, storage, automated transcoding, and accelerated playback, as well as media asset management and audio/video communications.
- * Version: 1.0.6
+ * Version: 1.0.7
  * Author: Tencent Cloud
  * Author URI: https://www.tencent.com/
  * Text Domain: tencentcloud-vod
@@ -22,7 +22,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-define('TENCENT_WORDPRESS_VOD_VERSION', '1.0.6');
+define('TENCENT_WORDPRESS_VOD_VERSION', '1.0.7');
 define('TENCENT_WORDPRESS_VOD_DIR', plugin_dir_path(__FILE__));
 define('TENCNET_WORDPRESS_VOD_BASENAME', plugin_basename(__FILE__));
 define('TENCENT_WORDPRESS_VOD_JS_DIR', plugins_url('tencentcloud-vod') . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR);
