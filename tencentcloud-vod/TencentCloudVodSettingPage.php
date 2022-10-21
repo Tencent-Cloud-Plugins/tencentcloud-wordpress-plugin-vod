@@ -73,7 +73,7 @@ function TencentCloudVodSettingPage()
     </ul>
     <div id="post-body">
         <div class="postbox">
-            <form method="post" id="tencnetcloud-vod-setting-form" action="" data-ajax-url="<?php echo $ajaxUrl ?>">
+            <form method="post" id="tencnetcloud-vod-setting-form" action="" data-ajax-url="<?php echo esc_attr($ajaxUrl) ?>">
                 <div id="vod-group-settings" class="group" style="display: block;">
                     <div class="inside">
                         <table class="form-table">
@@ -98,7 +98,7 @@ function TencentCloudVodSettingPage()
                             <tr>
                                 <th scope="row"><label for="vod-option-secret-id"><h5>SecretId</h5></label></th>
                                 <td><input type="password" autocomplete="off"
-                                           value="<?php echo $secretID; ?>" <?php if ($customKey !== $vodOptions::CUSTOM_KEY) {
+                                           value="<?php echo esc_attr($secretID); ?>" <?php if ($customKey !== $vodOptions::CUSTOM_KEY) {
                                         echo 'disabled="disabled"';
                                     } ?>
                                            id="vod-option-secret-id" size="65"><span id="vod_secret_id_type_exchange"
@@ -108,7 +108,7 @@ function TencentCloudVodSettingPage()
                             <tr>
                                 <th scope="row"><label for="vod-option-secret-key"><h5>SecretKey</h5></label></th>
                                 <td><input type="password" autocomplete="off"
-                                           value="<?php echo $secretKey; ?>" <?php if ($customKey !== $vodOptions::CUSTOM_KEY) {
+                                           value="<?php echo esc_attr($secretKey); ?>" <?php if ($customKey !== $vodOptions::CUSTOM_KEY) {
                                         echo 'disabled="disabled"';
                                     } ?>
                                            id="vod-option-secret-key" size="65"><span id="vod_secret_key_type_exchange"
@@ -126,7 +126,7 @@ function TencentCloudVodSettingPage()
                             <tr>
                                 <th scope="row"><label for="vod-option-sdk-appid"><h5>SubAppID</h5></label></th>
                                 <td><input type="text" name="vod-option-sdk-appid" autocomplete="off"
-                                           value="<?php echo $SubAPPID; ?>"
+                                           value="<?php echo esc_attr($SubAPPID); ?>"
                                            id="vod-option-sdk-appid" size="65">
                                     <p class="description">
 	                                    <?php _e("Access", "tencentcloud-vod"); ?>

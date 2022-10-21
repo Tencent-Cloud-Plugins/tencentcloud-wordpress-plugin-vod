@@ -4,7 +4,7 @@ Contributors: Tencent
 Donate link: https://www.tencent.com/
 Tags:tencent,tencentcloud,qcloud,春雨,腾讯云点播,腾讯云VOD,腾讯云,云点播
 Requires at least: 4.5.0
-Tested up to: 6.0.2
+Tested up to: 6.0.3
 Stable tag: 1.0.6
 License:Apache 2.0
 License URI:http://www.apache.org/licenses/LICENSE-2.0

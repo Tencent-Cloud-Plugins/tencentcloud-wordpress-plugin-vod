@@ -92,11 +92,10 @@ function tencent_wordpress_plugin_common_page()
                         <?php
                         foreach ($tencent_plugins as $path => $plugin) {
                             echo '<div class="row">';
-                            $desc = __($plugin['Description'], $plugin['Name']);
                             if (isset($plugin['nick_name'])) {
-                                echo '<span class="col-lg-4"><h5>' . __($plugin['nick_name'], $plugin['Name']) . '</h5>' . $desc . '</span>';
+                                echo '<span class="col-lg-4"><h5>' . $plugin['nick_name'] . '</h5>' . $plugin['Description'] . '</span>';
                             } else {
-                                echo '<span class="col-lg-4"><h5>' . __($plugin['Name'], $plugin['Name']) . '</h5>' . $desc . '</span>';
+                                echo '<span class="col-lg-4"><h5>' . $plugin['Name'] . '</h5>' . $plugin['Description'] . '</span>';
                             }
 
                             echo '<span class="col-lg-1 pluging-space-center">' . $plugin['Version'] . '</span>';
@@ -136,7 +135,7 @@ function tencent_wordpress_plugin_common_page()
                             <div class="row">
                                 <div class="col-lg-9">
                                     <form id="tencent_wordpress_common_secert_info_form"
-                                          data-ajax-url="<?php echo $ajax_url ?>" name="twpcommomsecret" method="post"
+                                          data-ajax-url="<?php echo esc_attr($ajax_url) ?>" name="twpcommomsecret" method="post"
                                           class="bs-component">
                                         <!-- Setting Option no_local_file-->
                                         <div class="row form-group">
