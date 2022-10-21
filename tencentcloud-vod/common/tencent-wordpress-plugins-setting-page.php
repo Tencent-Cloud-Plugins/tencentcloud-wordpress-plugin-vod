@@ -92,11 +92,10 @@ function tencent_wordpress_plugin_common_page()
                         <?php
                         foreach ($tencent_plugins as $path => $plugin) {
                             echo '<div class="row">';
-                            $desc = $plugin['Description'];
                             if (isset($plugin['nick_name'])) {
-                                echo '<span class="col-lg-4"><h5>' . plugin['nick_name'] . '</h5>' . $desc . '</span>';
+                                echo '<span class="col-lg-4"><h5>' . $plugin['nick_name'] . '</h5>' . $plugin['Description'] . '</span>';
                             } else {
-                                echo '<span class="col-lg-4"><h5>' . $plugin['Name'] . '</h5>' . $desc . '</span>';
+                                echo '<span class="col-lg-4"><h5>' . $plugin['Name'] . '</h5>' . $plugin['Description'] . '</span>';
                             }
 
                             echo '<span class="col-lg-1 pluging-space-center">' . $plugin['Version'] . '</span>';
