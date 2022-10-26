@@ -93,12 +93,12 @@ function tencent_wordpress_plugin_common_page()
                         foreach ($tencent_plugins as $path => $plugin) {
                             echo '<div class="row">';
                             if (isset($plugin['nick_name'])) {
-                                echo '<span class="col-lg-4"><h5>' . $plugin['nick_name'] . '</h5>' . $plugin['Description'] . '</span>';
+                                echo '<span class="col-lg-4"><h5>' . esc_attr($plugin['nick_name']) . '</h5>' . esc_attr($plugin['Description']) . '</span>';
                             } else {
-                                echo '<span class="col-lg-4"><h5>' . $plugin['Name'] . '</h5>' . $plugin['Description'] . '</span>';
+                                echo '<span class="col-lg-4"><h5>' . esc_attr($plugin['Name']) . '</h5>' . esc_attr($plugin['Description']) . '</span>';
                             }
 
-                            echo '<span class="col-lg-1 pluging-space-center">' . $plugin['Version'] . '</span>';
+                            echo '<span class="col-lg-1 pluging-space-center">' . esc_attr($plugin['Version']) . '</span>';
 
                             $status = __('Close', 'tencentcloud-vod');
                             $op_status = __('Open', 'tencentcloud-vod');
@@ -106,15 +106,15 @@ function tencent_wordpress_plugin_common_page()
 	                            $status = __('Open', 'tencentcloud-vod');
                                 $op_status = __('Close', 'tencentcloud-vod');
                             }
-	                        echo '<span class="col-lg-1 pluging-space-center"> ' . $status . ' </span>';
+	                        echo '<span class="col-lg-1 pluging-space-center"> ' . esc_attr($status) . ' </span>';
 
                             if (isset($plugin['activation']) && $plugin['activation'] == 'true') {
                                 echo '<span class="col-lg-2 pluging-space-center">';
                                 if (isset($plugin['status']) && $plugin['status'] == 'true') {
-                                    echo '<a type="button" class="btn btn-primary" href="' . $plugin['href'] . '">' . __('Configuration', 'tencentcloud-vod') . '</a>';
-                                    echo '<button title="' . $plugin['plugin_dir'] . '" id="button_close_tencent_plugin_' . $plugin['Name'] . '"  name="' . $plugin['Name'] . '" type="button" class="btn btn-primary plugin-button-close">' . $op_status . '</button>';
+                                    echo '<a type="button" class="btn btn-primary" href="' . esc_attr($plugin['href']) . '">' . __('Configuration', 'tencentcloud-vod') . '</a>';
+                                    echo '<button title="' . esc_attr($plugin['plugin_dir']) . '" id="button_close_tencent_plugin_' . esc_attr($plugin['Name']) . '"  name="' . esc_attr($plugin['Name']) . '" type="button" class="btn btn-primary plugin-button-close">' . esc_attr($op_status) . '</button>';
                                 } else {
-                                    echo '<button title="' . $plugin['plugin_dir'] . '" id="button_open_tencent_plugin_' . $plugin['Name'] . '"  name="' . $plugin['Name'] . '" type="button" class="btn btn-primary">' . $op_status . '</button>';
+                                    echo '<button title="' . esc_attr($plugin['plugin_dir']) . '" id="button_open_tencent_plugin_' . esc_attr($plugin['Name']) . '"  name="' . esc_attr($plugin['Name']) . '" type="button" class="btn btn-primary">' . esc_attr($op_status) . '</button>';
                                 }
                                 echo '</span>';
                             } else {
