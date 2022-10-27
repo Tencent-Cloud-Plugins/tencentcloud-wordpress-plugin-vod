@@ -20,15 +20,15 @@ use TencentCloudVod\TencentCloudVodActions;
 if (!defined('WP_UNINSTALL_PLUGIN')) {
     exit;
 }
-defined('TENCENT_WORDPRESS_PLUGINS_COMMON_DIR') or define('TENCENT_WORDPRESS_PLUGINS_COMMON_DIR',
+defined('TENCENT_WORDPRESS_VOD_PLUGINS_COMMON_DIR') or define('TENCENT_WORDPRESS_VOD_PLUGINS_COMMON_DIR',
     plugin_dir_path(__FILE__) . 'common' . DIRECTORY_SEPARATOR);
-require_once TENCENT_WORDPRESS_PLUGINS_COMMON_DIR . 'TencentWordpressPluginsSettingActions.php';
-defined('TENCENT_WORDPRESS_PLUGINS_SHOW_NAME') || define('TENCENT_WORDPRESS_PLUGINS_SHOW_NAME', 'tencentcloud-plugin-vod');
+require_once TENCENT_WORDPRESS_VOD_PLUGINS_COMMON_DIR . 'TencentWordpressPluginsSettingActions.php';
+defined('TENCENT_WORDPRESS_VOD_PLUGINS_SHOW_NAME') || define('TENCENT_WORDPRESS_VOD_PLUGINS_SHOW_NAME', 'tencentcloud-plugin-vod');
 defined('TENCENT_WORDPRESS_VOD_DIR') || define('TENCENT_WORDPRESS_VOD_DIR', plugin_dir_path(__FILE__));
 require_once TENCENT_WORDPRESS_VOD_DIR . 'TencentCloudVodActions.php';
 require_once TENCENT_WORDPRESS_VOD_DIR . 'TencentCloudVodOptions.php';
 //删除公共配置中本插件的信息
-TencentWordpressPluginsSettingActions::deleteTencentWordpressPlugin(TENCENT_WORDPRESS_PLUGINS_SHOW_NAME);
+TencentWordpressPluginsSettingActions::deleteTencentWordpressPlugin(TENCENT_WORDPRESS_VOD_PLUGINS_SHOW_NAME);
 //获取到插件的配置信息，如果存在则删除
 if (get_option('tencent_wordpress_vod_options')) {
     delete_option('tencent_wordpress_vod_options');

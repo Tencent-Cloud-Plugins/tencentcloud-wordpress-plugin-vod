@@ -102,7 +102,7 @@ class TencentCloudVodActions
                 $this->mediaUrl = $rsp->MediaUrl;
             } catch (Exception $e) {
                 // 处理上传异常
-                echo $e;
+                echo esc_attr($e);
             }
         }
         return $file;
@@ -129,7 +129,7 @@ class TencentCloudVodActions
                 $_SESSION['uploadVideos'][$upload['url']] = $rsp->MediaUrl;
             } catch (Exception $e) {
                 // 处理上传异常
-                echo $e;
+                echo esc_attr($e);
             }
         }
         return $upload;
